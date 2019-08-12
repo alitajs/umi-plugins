@@ -5,10 +5,15 @@
   "main": "./lib/index.js",
   "license": "MIT",
   "files": [
-    "lib",
-    "src"
+    "lib"
   ],
   "scripts": {
     "build": "father-build"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

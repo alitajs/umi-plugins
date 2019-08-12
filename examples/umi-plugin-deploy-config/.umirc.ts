@@ -1,4 +1,6 @@
-export default {
+import { IConfig } from 'umi-types';
+
+const config: IConfig = {
   hash: true,
   plugins: [
     ['umi-plugin-react', {
@@ -7,6 +9,10 @@ export default {
         level: 1
       }
     }],
-    ['@alitajs/umi-plugin-deploy-config']
-  ],
-}
+    ['@alitajs/umi-plugin-deploy-config', {
+      baseURL: 'https://api.***.com'
+    }]
+  ]
+};
+
+export default config;
