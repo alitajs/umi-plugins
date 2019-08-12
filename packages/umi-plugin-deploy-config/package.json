@@ -1,7 +1,14 @@
 {
-  "name": "umi-plugin-deploy-config",
+  "name": "@alitajs/umi-plugin-deploy-config",
   "version": "0.0.1",
   "description": "umi plugin",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "father-build"
+  }
 }

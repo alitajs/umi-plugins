@@ -1,0 +1,12 @@
+{
+  "name": "umi-plugin-deploy-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:umi": "umi build"
+  },
+  "devDependencies": {
+    "@alitajs/umi-plugin-deploy-config": "^0.0.1"
+  }
+}
