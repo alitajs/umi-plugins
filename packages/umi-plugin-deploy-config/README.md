@@ -4,6 +4,33 @@
 
 > 场景: 在实际开发中，项目会有不同的环境，如此能够做到一次编译，在各个环境下都可以运行呢？
 
+## 安装
+
+```
+// npm
+npm install --dev @alitajs/umi-plugin-deploy-config
+
+// yarn 
+yarn add @alitajs/umi-plugin-deploy-config
+```
+
+## 使用
+
+```
+// .umirc.ts || config/config.ts
+import { IConfig } from 'umi-types';
+
+const config: IConfig = {
+  plugins: [
+    ['@alitajs/umi-plugin-deploy-config', {
+      baseURL: 'https://api.***.com'
+    }]
+  ]
+};
+
+export default config;
+```
+
 * 输出配置文件如下
 ```
 // config.js
