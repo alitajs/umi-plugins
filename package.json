@@ -6,12 +6,21 @@
   "private": true,
   "scripts": {
     "bootstarp": "lerna bootstrap",
-    "build": "father-build"
+    "build": "father-build",
+    "build:umi": "lerna run build:umi --parallel"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.136",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
     "father-build": "^1.5.0",
     "lerna": "^3.16.4",
-    "typescript": "^3.5.3"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "typescript": "^3.5.3",
+    "umi": "^2.8.17",
+    "umi-plugin-react": "^1.9.15",
+    "umi-types": "^0.3.16"
   },
   "workspaces": [
     "packages/*",

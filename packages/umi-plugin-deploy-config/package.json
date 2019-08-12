@@ -1,0 +1,19 @@
+{
+  "name": "@alitajs/umi-plugin-deploy-config",
+  "version": "0.0.1",
+  "description": "umi plugin",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "father-build"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

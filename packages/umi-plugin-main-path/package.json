@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "umi-tools build"
+    "build": "father-build"
   },
   "peerDependencies": {
     "umi": "2.x"
