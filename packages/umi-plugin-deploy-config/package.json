@@ -1,0 +1,7 @@
+{
+  "name": "umi-plugin-deploy-config",
+  "version": "0.0.1",
+  "description": "umi plugin",
+  "main": "index.js",
+  "license": "MIT"
+}
