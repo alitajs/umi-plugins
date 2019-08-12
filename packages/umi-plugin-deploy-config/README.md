@@ -31,7 +31,10 @@ const config: IConfig = {
 export default config;
 ```
 
+## 输出结果
+
 * 输出配置文件如下
+
 ```
 // config.js
 (function() {
@@ -45,6 +48,7 @@ export default config;
 ```
 
 * 输出Html文件如下
+
 ```
 // 核心代码
 <!DOCTYPE html>
@@ -71,5 +75,3 @@ export default config;
 </html>
 
 ```
-
-
