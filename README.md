@@ -8,6 +8,6 @@ Umi 插件集合
 
 ## 插件目录
 
-|插件名称|插件描述|
-|------|-------|
-|[umi-plugin-deploy-config](https://github.com/alitajs/umi-plugin-packages/blob/master/packages/umi-plugin-deploy-config/README.md)|提取项目配置到输出目录的根目录|
+|   插件名称   |     插件版本    |     插件描述     |
+|-------------|---------------|-----------------|
+|[umi-plugin-deploy-config](https://github.com/alitajs/umi-plugin-packages/blob/master/packages/umi-plugin-deploy-config/README.md)|[![NPM version](https://img.shields.io/npm/v/@alitajs/umi-plugin-deploy-config.svg?style=flat)](https://npmjs.org/package/@alitajs/antd-plus)|提取项目配置到输出目录的根目录|
