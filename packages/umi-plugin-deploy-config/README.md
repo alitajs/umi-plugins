@@ -1,6 +1,6 @@
 <h1 align="center">umi-plugin-deploy-config</h1>
 
-[![NPM version](https://img.shields.io/npm/v/@alitajs/umi-plugin-deploy-config.svg?style=flat)
+[![NPM version](https://img.shields.io/npm/v/@alitajs/umi-plugin-deploy-config.svg?style=flat)](https://npmjs.org/package/@alitajs/antd-plus)
 
 插件作用提取项目部署的配置到输出目录的根目录
 
