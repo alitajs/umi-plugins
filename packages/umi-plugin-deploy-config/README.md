@@ -1,5 +1,7 @@
 <h1 align="center">umi-plugin-deploy-config</h1>
 
+[![NPM version](https://img.shields.io/npm/v/@alitajs/umi-plugin-deploy-config.svg?style=flat)
+
 插件作用提取项目部署的配置到输出目录的根目录
 
 > 场景: 在实际开发中，项目会有不同的环境，如此能够做到一次编译，在各个环境下都可以运行呢？
@@ -11,7 +13,7 @@
 npm install --dev @alitajs/umi-plugin-deploy-config
 
 // yarn 
-yarn add @alitajs/umi-plugin-deploy-config
+yarn add --dev @alitajs/umi-plugin-deploy-config
 ```
 
 ## 使用
