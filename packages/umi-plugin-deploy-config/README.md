@@ -6,6 +6,11 @@
 
 > 场景: 在实际开发中，项目会有不同的环境，如此能够做到一次编译，在各个环境下都可以运行呢？
 
+**注意:本插件主要针对UMI项目CDN流程**
+
+* umi 中请勿设置`publicPath`、`runtimePublicPath`
+* 如要结合CI流程 请配和[update-deploy-config](https://github.com/ts-react/update-deploy-config)使用
+
 ## 安装
 
 ```
