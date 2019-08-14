@@ -5,6 +5,7 @@ import { IApi } from 'umi-types';
 import { getUmiCssScript, getUmiJsScript, replacePath } from './utils/utils';
 import { IOptions } from './types';
 
+
 export default function(
   api: IApi,
   {
@@ -16,7 +17,7 @@ export default function(
   api.modifyDefaultConfig(config => {
     return {
       ...config,
-      publicPath: '/',
+      publicPath: './',
       // 使用此插件默认开启runtimePublicPath
       runtimePublicPath: true,
     }
@@ -29,7 +30,6 @@ export default function(
     const compiled = template(data.toString());
     const result = compiled({
       baseURL: baseURL,
-      routerBase: config.base,
       publicPath: config.publicPath
     });
 
@@ -43,7 +43,7 @@ export default function(
 
     // 插入config.js
     $('head').append(`
-      <script src="/config.js?t=${new Date().getTime()}"></script>
+      <script src="${config.base === '/' ? '' : config.base}/config.js?t=${new Date().getTime()}"></script>
     `);
 
     if (umiCssPath) {

@@ -42,8 +42,6 @@ export default config;
 (function() {
   // API地址
   window.baseURL = 'https://api.***.com';
-  // 路由基本路径
-  window.routerBase = "/";
   // 共有路径
   window.publicPath = "https://cdn.***.com/${project-name}/${env}/";
 })();
@@ -56,7 +54,7 @@ export default config;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="./config.js?t=1565598003"></script>
+    <script src="/{base}/config.js?t=1565598003"></script>
     <script>
       var bundleStyle = document.createElement('link');
       bundleStyle.rel = 'stylesheet';
