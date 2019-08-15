@@ -2,7 +2,6 @@ import { IConfig } from 'umi-types';
 
 const config: IConfig = {
   hash: true,
-  base: '/console',
   plugins: [
     ['umi-plugin-react', {
       // 开启按需加载

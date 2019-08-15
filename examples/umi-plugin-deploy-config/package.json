@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:umi": "umi build"
+    "build:umi": "umi build",
+    "dev:umi": "umi dev"
   },
   "devDependencies": {
-    "@alitajs/umi-plugin-deploy-config": "^0.0.1"
+    "@alitajs/umi-plugin-deploy-config": "^0.1.1"
   }
 }

@@ -1,1 +1,2 @@
-packages/umi-plugin-deploy-config/lib
+lib
+.umi

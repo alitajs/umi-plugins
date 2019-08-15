@@ -5,7 +5,6 @@ import { IApi } from 'umi-types';
 import { getUmiCssScript, getUmiJsScript, replacePath } from './utils/utils';
 import { IOptions } from './types';
 
-
 export default function(
   api: IApi,
   {
@@ -13,6 +12,10 @@ export default function(
   }: IOptions
 ) {
   const { paths, config } = api;
+
+  if (process.env.NODE_ENV !== 'production') {
+    return;
+  }
 
   api.modifyDefaultConfig(config => {
     return {
