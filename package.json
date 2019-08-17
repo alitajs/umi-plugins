@@ -7,7 +7,7 @@
   "scripts": {
     "bootstarp": "lerna bootstrap",
     "build": "father-build",
-    "build:umi": "lerna run build:umi --parallel"
+    "clean": "lerna clean --yes"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.136",
