@@ -1,6 +1,6 @@
 <h1 align="center">umi-plugin-lodash</h1>
 
-[![NPM version](https://img.shields.io/npm/v/@alitajs/umi-plugin-loash?style=flat)](https://npmjs.org/package/@alitajs/umi-plugin-loash)
+[![NPM version](https://img.shields.io/npm/v/@alitajs/umi-plugin-lodash?style=flat)](https://npmjs.org/package/@alitajs/umi-plugin-lodash)
 
 > 按需打包Lodash
 
@@ -8,10 +8,10 @@
 
 ```
 // npm
-npm install --dev @alitajs/umi-plugin-loash
+npm install --dev @alitajs/umi-plugin-lodash
 
 // yarn 
-yarn add --dev @alitajs/umi-plugin-loash
+yarn add --dev @alitajs/umi-plugin-lodash
 ```
 
 ## 使用
@@ -21,7 +21,7 @@ yarn add --dev @alitajs/umi-plugin-loash
 
 const config = {
   plugins: [
-    ['@alitajs/umi-plugin-loash']
+    ['@alitajs/umi-plugin-lodash']
   ]
 };
 
