@@ -7,11 +7,16 @@ export default function(
   api: IApi,
   options: IOptions
 ) {
+  const newOptions = Object.assign({
+    external: false,
+    version: '',
+    url: ''
+  }, options);
   api.chainWebpackConfig((memo) => {
     memo.resolve.alias.set('umi/lodash', dirname(
       require.resolve('lodash/package'),
     ));
-    if (options.external) {
+    if (newOptions.external) {
       const externals = memo.externals || {};
       memo.externals({
         ...externals,
@@ -23,7 +28,7 @@ export default function(
   });
 
   api.modifyAFWebpackOpts(memo => {
-    if (options.external) {
+    if (newOptions.external) {
       return memo;
     }
     return {
@@ -39,15 +44,15 @@ export default function(
   });
 
   api.addHTMLHeadScript(() => {
-    if (options.external) {
-      if (options.cdnUrl) {
+    if (newOptions.external) {
+      if (newOptions.url) {
         return {
-          src: options.cdnUrl
+          src: newOptions.url
         }
       }
-      if (options.version) {
+      if (newOptions.version) {
         return {
-          src: `https://cdnjs.cloudflare.com/ajax/libs/lodash.js/${options.version}/lodash.min.js`,
+          src: `https://cdnjs.cloudflare.com/ajax/libs/lodash.js/${newOptions.version}/lodash.min.js`,
         };
       } else {
         throw new Error('if you need external lodash, version is required!');
