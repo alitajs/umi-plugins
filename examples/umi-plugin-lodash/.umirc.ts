@@ -6,7 +6,10 @@ const config = {
         level: 1
       }
     }],
-    // ['@alitajs/umi-plugin-lodash']
+    ['@alitajs/umi-plugin-lodash', {
+      external: true,
+      version: '4.0.0'
+    }]
   ]
 };
 
