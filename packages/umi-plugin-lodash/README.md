@@ -4,6 +4,8 @@
 
 > 按需打包Lodash
 
+**推荐使用[umi-plugin-lodash](https://github.com/yutingzhao1991/umi-plugin-lodash)**
+
 ## 安装
 
 ```
