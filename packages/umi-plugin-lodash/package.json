@@ -4,6 +4,10 @@
   "description": "按需打包Lodash",
   "main": "./lib/index.js",
   "license": "MIT",
+  "keywords": [
+    "umi-plugin",
+    "lodash"
+  ],
   "files": [
     "lib"
   ],
