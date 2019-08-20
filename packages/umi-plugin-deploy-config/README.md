@@ -38,6 +38,20 @@ const config: IConfig = {
 export default config;
 ```
 
+## Options
+
+### baseURL
+
+* 类型: `string`
+* 描述: API地址
+* 默认值: 无
+
+### exportConfig
+
+* 类型: `boolean`
+* 描述: 是否导出config.js
+* 默认值: true
+
 ## 输出结果
 
 * 输出配置文件如下

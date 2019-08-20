@@ -8,7 +8,8 @@ import { IOptions } from './types';
 export default function(
   api: IApi,
   {
-    baseURL = '/'
+    baseURL = '/',
+    exportConfig = true
   }: IOptions
 ) {
   const { paths, config } = api;
@@ -28,16 +29,18 @@ export default function(
   });
 
   api.onBuildSuccessAsync(async () => {
-    const data = readFileSync(join(__dirname, './templates/config.js.tpl'), 'utf-8');
-    // 生成config.js
+    if (exportConfig) {
+      const data = readFileSync(join(__dirname, './templates/config.js.tpl'), 'utf-8');
+      // 生成config.js
 
-    const compiled = template(data.toString());
-    const result = compiled({
-      baseURL: baseURL,
-      publicPath: config.publicPath
-    });
+      const compiled = template(data.toString());
+      const result = compiled({
+        baseURL: baseURL,
+        publicPath: config.publicPath
+      });
 
-    writeFileSync(join(paths.absOutputPath, 'config.js'), result);
+      writeFileSync(join(paths.absOutputPath, 'config.js'), result);
+    }
   });
 
   api.modifyHTMLWithAST(($, { route, getChunkPath }) => {
@@ -45,10 +48,12 @@ export default function(
     let umiJsPath = getChunkPath('umi.js');
     let umiCssPath = getChunkPath('umi.css');
 
-    // 插入config.js
-    $('head').append(`
+    if (exportConfig) {
+      // 插入config.js
+      $('head').append(`
       <script src="${endsWith(config.base, '/') ? config.base: config.base + '/' }config.js?t=${new Date().getTime()}"></script>
     `);
+    }
 
     if (umiCssPath) {
       const links = $('head').find('link');

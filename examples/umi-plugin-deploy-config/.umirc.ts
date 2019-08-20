@@ -1,6 +1,7 @@
 import { IConfig } from 'umi-types';
 
 const config: IConfig = {
+  base: '/test',
   hash: true,
   plugins: [
     ['umi-plugin-react', {
@@ -10,7 +11,8 @@ const config: IConfig = {
       }
     }],
     ['@alitajs/umi-plugin-deploy-config', {
-      baseURL: 'https://api.***.com'
+      baseURL: 'https://api.***.com',
+      exportConfig: false
     }]
   ]
 };
