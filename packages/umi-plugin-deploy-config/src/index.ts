@@ -1,6 +1,6 @@
 import { writeFileSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { template } from 'lodash';
+import { template, endsWith } from 'lodash';
 import { IApi } from 'umi-types';
 import { getUmiCssScript, getUmiJsScript, replacePath } from './utils/utils';
 import { IOptions } from './types';
@@ -20,6 +20,7 @@ export default function(
   api.modifyDefaultConfig(config => {
     return {
       ...config,
+      base: '/',
       publicPath: './',
       // 使用此插件默认开启runtimePublicPath
       runtimePublicPath: true,
@@ -46,7 +47,7 @@ export default function(
 
     // 插入config.js
     $('head').append(`
-      <script src="${config.base === '/' ? '' : config.base}/config.js?t=${new Date().getTime()}"></script>
+      <script src="${endsWith(config.base, '/') ? config.base: config.base + '/' }config.js?t=${new Date().getTime()}"></script>
     `);
 
     if (umiCssPath) {
