@@ -12,19 +12,12 @@ export default function(
     version: '',
     url: ''
   }, options);
-  api.chainWebpackConfig((memo) => {
-    memo.resolve.alias.set('umi/lodash', dirname(
+
+  api.chainWebpackConfig((config) => {
+    config.resolve.alias.set('umi/lodash', dirname(
       require.resolve('lodash/package'),
     ));
-    if (newOptions.external) {
-      const externals = memo.externals || {};
-      memo.externals({
-        ...externals,
-        'umi/lodash': '_',
-        'lodash': '_',
-      });
-    }
-    return memo;
+    console.log(config.toConfig());
   });
 
   api.modifyAFWebpackOpts(memo => {
@@ -42,6 +35,25 @@ export default function(
       },
     };
   });
+
+  api.modifyAFWebpackOpts(memo => {
+    if (options.external) {
+      return {
+        ...memo,
+        externals: {
+          // @ts-ignore
+          ...(memo.externals || []),
+          lodash : {
+            commonjs: 'lodash',
+            amd: 'lodash',
+            root: '_' // indicates global variable
+          }
+        }
+      }
+    }
+    return memo;
+  });
+
 
   api.addHTMLHeadScript(() => {
     if (newOptions.external) {
