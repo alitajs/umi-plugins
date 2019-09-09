@@ -66,3 +66,7 @@ export default function() {
 ### sassModule
 
 同上
+
+## 感谢
+
+* [jqxismygit](https://github.com/jqxismygit)
