@@ -33,6 +33,9 @@ const ruleMap = {
       },
       {
         loader: 'postcss-loader'
+      },
+      {
+        loader: 'less-loader'
       }
     ]
   },
