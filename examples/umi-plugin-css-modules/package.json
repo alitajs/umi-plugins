@@ -9,6 +9,7 @@
     "umi:start": "umi dev"
   },
   "dependencies": {
-    "@alitajs/umi-plugin-css-modules": "^0.0.1"
+    "@alitajs/umi-plugin-css-modules": "^0.0.1",
+    "antd": "^3.23.3"
   }
 }
