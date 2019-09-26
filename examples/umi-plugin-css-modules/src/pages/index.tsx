@@ -8,6 +8,7 @@ export default function() {
     <div>
       <h1 className={styles.a}>Page Home</h1>
       <h1 className={styles1.a}>Page Home</h1>
+      <h1 className={styles1["button-test"]}>Hello World!</h1>
       <h1 className="b">Page Home</h1>
     </div>
   );
