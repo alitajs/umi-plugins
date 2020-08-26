@@ -1,19 +1,17 @@
-# @umijs/plugin-antd
+<h1 align="center">@alitajs/umi-plugin-console-version</h1>
 
-<h1 align="center">@alitajs/plugin-console-version</h1>
+> 在控制台输出当前项目版本
 
-> 支持生产环境查询当前项目版本
-
-## Install
+## 安装
 
 Using npm:
 
 ```bash
-$ npm install --save-dev @alitajs/plugin-console-version
+$ npm install --save-dev @alitajs/umi-plugin-console-version
 ```
 
 or using yarn:
 
 ```bash
-$ yarn add @alitajs/plugin-console-version --dev
+$ yarn add @alitajs/umi-plugin-console-version --dev
 ```
