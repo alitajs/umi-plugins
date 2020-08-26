@@ -23,7 +23,7 @@ export default function (api: IApi) {
     api.addHTMLHeadScripts(() => {
       return [
         {
-          content: `window.${name} = "${pkgVersion}";`,
+          content: `console.log("版本: ${pkgVersion}@${name}");`,
         }
       ]
     })
