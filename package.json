@@ -7,20 +7,22 @@
   "scripts": {
     "bootstarp": "lerna bootstrap",
     "build": "father-build",
-    "clean": "lerna clean --yes"
+    "test": "walrus test",
+    "release": "walrus release"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.136",
-    "@types/react": "^16.9.1",
-    "@types/react-dom": "^16.8.5",
-    "father-build": "^1.5.0",
-    "lerna": "^3.16.4",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "typescript": "^3.5.3",
-    "umi": "^2.8.17",
-    "umi-plugin-react": "^1.9.15",
-    "umi-types": "^0.3.16"
+    "@types/react": "^16.9.47",
+    "@types/react-dom": "^16.9.8",
+    "@walrus/cli": "^1.3.1",
+    "@walrus/plugin-release": "^1.9.1",
+    "@walrus/plugin-test": "^1.1.0",
+    "father-build": "^1.18.3",
+    "lerna": "^3.22.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^4.0.2",
+    "umi": "^3.2.17",
+    "umi-plugin-react": "^1.15.8"
   },
   "workspaces": [
     "packages/*",
