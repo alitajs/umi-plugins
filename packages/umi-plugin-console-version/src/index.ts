@@ -6,26 +6,31 @@ export default function (api: IApi) {
   const pkgVersion = api.pkg?.version;
 
   api.describe({
-    key: 'projectName',
+    key: 'consoleVersion',
     config: {
-      default: '',
+      default: {
+        bindGlobal: false
+      },
       schema(joi) {
-        return joi.string();
+        return joi.object({
+          projectName: joi.string(),
+          bindGlobal: joi.boolean(),
+        });
       }
     }
   });
 
   if (!pkgName) return;
 
-  const name = api.userConfig.projectName || getProjectName(pkgName);
+  const { projectName, bindGlobal } = api.userConfig.consoleVersion;
+
+  const name = projectName || getProjectName(pkgName);
 
   if (name && pkgVersion) {
     api.addHTMLHeadScripts(() => {
-      return [
-        {
-          content: `console.log("版本: ${pkgVersion}@${name}");`,
-        }
-      ]
+      return bindGlobal
+      ? [{ content: `window.${projectName} = "${pkgVersion}"; console.log("版本: ${pkgVersion}@${name}");` }]
+      : [{ content: `console.log("版本: ${pkgVersion}@${name}");` }]
     })
   }
 }
