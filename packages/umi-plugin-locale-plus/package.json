@@ -1,0 +1,37 @@
+{
+  "name": "@alitajs/umi-plugin-locale-plus",
+  "version": "0.10.1",
+  "description": "umi-plugin-locale",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/plugins"
+  },
+  "keywords": [
+    "umi"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "umi": "3.x"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.1.0",
+    "@formatjs/intl-pluralrules": "^1.5.0",
+    "@formatjs/intl-relativetimeformat": "^4.5.7",
+    "intl": "1.2.5",
+    "moment": "2.x",
+    "react-intl": "3.12.0",
+    "warning": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/warning": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
