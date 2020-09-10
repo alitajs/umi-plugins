@@ -1,9 +1,10 @@
 export default function() {
   return `\
 import React, { useContext } from 'react';
-import AuthorityContext, { AuthorityInstance as AuthorityInstanceType } from './context';
+import Policy from '@pansy/policy';
+import AuthorityContext from './context';
 
-export type AuthorityInstance = AuthorityInstanceType;
+export type AuthorityInstance = Policy;
 
 export const useAuthority = () => {
   return useContext(AuthorityContext);

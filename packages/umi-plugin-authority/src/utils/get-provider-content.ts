@@ -5,7 +5,7 @@ export default function(util: typeof utils) {
   return `\
 import React, { useMemo } from 'react';
 import { IRoute } from 'umi';
-import Policy from '@pansy/policy';
+import Policy, { Action, IPolicyData } from '@pansy/policy';
 import { useModel } from '../core/umiExports';
 import authorityFactory from '../../authority';
 import AuthorityContext, { AuthorityInstance } from './context';
@@ -18,6 +18,12 @@ type Routes = IRoute[];
 interface Props {
   routes: Routes;
   children: React.ReactNode;
+}
+
+export type AuthorityFun = (initialState: any) => {
+  actions?: Action[];
+  policies?: IPolicyData[];
+  [key: string]: any;
 }
 
 const AuthorityProvider: React.FC<Props> = props => {

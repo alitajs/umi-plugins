@@ -5,7 +5,7 @@ import Policy from '@pansy/policy';
 
 export type AuthorityInstance = Policy;
 
-const AuthorityContext = React.createContext<AuthorityInstance>(null!);
+const AuthorityContext = React.createContext<Policy>(null!);
 
 export default AuthorityContext;
 `;
