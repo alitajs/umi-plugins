@@ -59,6 +59,8 @@ export default function(initialState) {
 
 ### useAuthority
 
+> API 请查看 [Policy](https://github.com/pansyjs/utils/tree/master/packages/policy)
+
 我们提供了一个 Hooks 用于在组件中获取权限相关信息，如下所示：
 
 ```
@@ -87,7 +89,7 @@ export default PageA;
 | access        | 权限字符串                 | `string`              | --     |
 | accessible    | 直接指定权限               |   `boolean`            |  --      |
 | fallback       | 无权限时的显示             | `React.ReactNode` | --     |
-| children       | 需要控制权限的节点          | `React.ReactNode` | --     |
+| children       | 需要控制权限的节点          | `React.ReactNode` | `Function` | --     |
 
 **注意:** `accessible` 优先级最高
 
@@ -123,7 +125,7 @@ const PageA = props => {
         accessible={combinationVerify('module3/action1')}
         fallback={<div>Can not delete foo.</div>}
       >
-        Delete foo.
+        {(isMatch) => <span>权限校验结果: {isMatch}</span>}
       </Authority>
     </div>
   );

@@ -11,19 +11,44 @@ export const useAuthority = () => {
 };
 
 export interface AuthorityProps {
-  accessible: boolean;
+  access?: string | string[];
+  accessible?: boolean;
   fallback?: React.ReactNode;
 }
 
-export const Authority: React.FC<AuthorityProps> = props => {
-  const { accessible, fallback, children } = props;
+const checkAuthority = (policy: Policy, access: string | string[]): boolean => {
+  let result = true;
 
-  if (process.env.NODE_ENV === 'development' && typeof accessible === 'function') {
-    console.warn(
-      '[plugin-access]: provided "accessible" prop is a function named "' +
-        (accessible as Function).name +
-        '" instead of a boolean, maybe you need check it.',
-    );
+  if (policy) {
+    // 数组处理
+    if (Array.isArray(access)) {
+      if (!policy.multipleVerify(access)) {
+        result = false;
+      }
+    }
+
+    // string 处理
+    if (typeof access === 'string') {
+      if (!policy.combinationVerify(access)) {
+        result = false;
+      }
+    }
+  }
+
+  return result;
+};
+
+export const Authority: React.FC<AuthorityProps> = (props) => {
+  const { access, fallback, children } = props;
+  const policy = useContext(AuthorityContext);
+
+  const checkResult = checkAuthority(policy, access);
+
+  const accessible = ('accessible' in props) ? props.accessible : checkResult;
+
+
+  if (typeof children === 'function') {
+    return <>{children(accessible)}</>;
   }
 
   return <>{accessible ? children : fallback}</>;
