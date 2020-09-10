@@ -1,0 +1,26 @@
+{
+  "name": "@alitajs/umi-plugin-authority",
+  "version": "0.1.0",
+  "description": "Umi plugin for authority management.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "umi"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@umijs/plugin-initial-state": "2.x",
+    "@umijs/plugin-model": "2.x",
+    "umi": "3.x"
+  },
+  "dependencies": {
+    "@pansy/policy": "^0.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
