@@ -1,9 +1,9 @@
 export default function() {
   return `\
 import React from 'react';
-import authorityFactory from '@/authority';
+import Policy from '@pansy/policy';
 
-export type AuthorityInstance = ReturnType<typeof authorityFactory>;
+export type AuthorityInstance = Policy;
 
 const AuthorityContext = React.createContext<AuthorityInstance>(null!);
 

@@ -10,10 +10,6 @@ import { checkIfHasDefaultExporting } from './utils';
 const AUTHORITY_DIR = 'plugin-authority';
 
 export default function(api: IApi) {
-  if (api.hasPlugins(['@umijs/plugin-access'])) {
-    api.skipPlugins(['@umijs/plugin-access']);
-  }
-
   const tmpDir = api.paths.absTmpPath;
   const srcDir = api.paths.absSrcPath;
   const authorityFilePath = api.utils.winPath(join(srcDir!, 'authority'));
@@ -32,7 +28,7 @@ export default function(api: IApi) {
        * 1. 生成 authority 实例;
        * 2. 遍历修改 routes;
        * 3. 传给 context 的 Provider
-       *  */
+       */
       api.writeTmpFile({
         path: `${AUTHORITY_DIR}/authority-provider.ts`,
         content: getProviderContent(api.utils),

@@ -1,0 +1,33 @@
+{
+  "name": "@alitajs/umi-preset-react",
+  "version": "0.1.0",
+  "description": "umi-preset-react",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "umi"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "umi": "3.x"
+  },
+  "dependencies": {
+    "@alitajs/umi-plugin-authority": "^0.1.0",
+    "@umijs/plugin-analytics": "0.2.2",
+    "@umijs/plugin-antd": "0.8.0",
+    "@umijs/plugin-crossorigin": "1.1.1",
+    "@umijs/plugin-helmet": "1.1.1",
+    "@umijs/plugin-initial-state": "2.2.1",
+    "@umijs/plugin-layout": "0.12.1",
+    "@umijs/plugin-locale": "0.10.1",
+    "@umijs/plugin-model": "2.5.3",
+    "@umijs/plugin-request": "2.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

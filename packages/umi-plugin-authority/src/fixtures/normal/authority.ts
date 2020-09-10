@@ -1,6 +1,5 @@
 // src/access.ts
-export default function(initialState: { currentUser?: any }) {
-  const { currentUser } = initialState || {};
+export default function() {
   return {
     actions: [
       { module: 'module1', action: 'action1' },
