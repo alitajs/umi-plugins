@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/alitajs/umi-plugins/compare/@alitajs/umi-plugin-authority@0.3.0...@alitajs/umi-plugin-authority@0.4.0) (2020-09-10)
+
+
+### Features
+
+* **umi-plugin-authority:** 权限组件优化 ([15084c0](https://github.com/alitajs/umi-plugins/commit/15084c0e70eb9027202db1433b9b5894c603f62c))
+
+
+
+
+
 # [0.3.0](https://github.com/alitajs/umi-plugins/compare/@alitajs/umi-plugin-authority@0.2.0...@alitajs/umi-plugin-authority@0.3.0) (2020-09-10)
 
 
