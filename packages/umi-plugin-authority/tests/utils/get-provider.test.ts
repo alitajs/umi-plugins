@@ -1,4 +1,4 @@
-import getAccessProviderContent from '../../src/utils/get-provider-content';
+import getAccessProviderContent from '../../src/utils/get-provider';
 
 const utils = {
   winPath: jest.fn(() => 'test'),

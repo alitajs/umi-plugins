@@ -1,9 +1,9 @@
 import { IApi } from 'umi';
 import { join } from 'path';
-import getContextContent from './utils/get-context-content';
-import getProviderContent from './utils/get-provider-content';
+import getContextContent from './utils/get-context';
+import getProviderContent from './utils/get-provider';
 import getContent from './utils/get-content';
-import getRootContainerContent from './utils/get-root-container-content';
+import getRootContainerContent from './utils/get-root-container';
 import { checkIfHasDefaultExporting } from './utils';
 
 // plugin-authority 插件创建临时文件的文件夹名称

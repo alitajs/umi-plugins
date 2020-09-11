@@ -1,4 +1,4 @@
-import getRootContainerContent from '../../src/utils/get-root-container-content';
+import getRootContainerContent from '../../src/utils/get-root-container';
 
 describe('getRootContainerContent', () => {
   it('should return content string when call getRootContainerContent', () => {

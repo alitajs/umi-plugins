@@ -1,4 +1,4 @@
-import getAccessContent from '../../src/utils/get-context-content';
+import getAccessContent from '../../src/utils/get-context';
 
 describe('getAccessContent', () => {
   it('should return content string when call getAccessContent', () => {
