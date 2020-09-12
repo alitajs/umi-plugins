@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/alitajs/umi-plugins/compare/@alitajs/umi-plugin-authority@0.4.0...@alitajs/umi-plugin-authority@0.5.0) (2020-09-12)
+
+
+### Features
+
+* **umi-plugin-authority:** 支持 separator 配置 ([1007b9c](https://github.com/alitajs/umi-plugins/commit/1007b9c02c3353c070add8159f5a5e1d2ec9f9a7))
+
+
+
+
+
 # [0.4.0](https://github.com/alitajs/umi-plugins/compare/@alitajs/umi-plugin-authority@0.3.0...@alitajs/umi-plugin-authority@0.4.0) (2020-09-10)
 
 
