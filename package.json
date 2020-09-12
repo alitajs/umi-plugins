@@ -12,6 +12,7 @@
     "release": "walrus release"
   },
   "devDependencies": {
+    "@alitajs/antd-plus": "^2.2.2",
     "@testing-library/react": "^11.0.2",
     "@testing-library/react-hooks": "^3.4.1",
     "@types/react": "^16.9.49",

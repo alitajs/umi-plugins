@@ -1,20 +1,26 @@
 export default function() {
   return `\
 import React, { useContext } from 'react';
-import Policy from '@pansy/policy';
+import Policy, { Action, PolicyData, Separator } from '@pansy/policy';
 import AuthorityContext from './context';
 
 export type AuthorityInstance = Policy;
-
-export const useAuthority = () => {
-  return useContext(AuthorityContext);
-};
 
 export interface AuthorityProps {
   access?: string | string[];
   accessible?: boolean;
   fallback?: React.ReactNode;
 }
+
+export type AuthorityConfigFun = (initialState: any) => {
+  actions?: Action[];
+  policies?: PolicyData[];
+  separator?: Separator;
+}
+
+export const useAuthority = () => {
+  return useContext(AuthorityContext);
+};
 
 const checkAuthority = (policy: Policy, access: string | string[]): boolean => {
   let result = true;

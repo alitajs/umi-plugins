@@ -5,7 +5,7 @@ export default function(util: typeof utils) {
   return `\
 import React, { useMemo } from 'react';
 import { IRoute } from 'umi';
-import Policy, { Action, IPolicyData } from '@pansy/policy';
+import Policy from '@pansy/policy';
 import { useModel } from '../core/umiExports';
 import authorityFactory from '../../authority';
 import AuthorityContext, { AuthorityInstance } from './context';
@@ -20,12 +20,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-export type AuthorityFun = (initialState: any) => {
-  actions?: Action[];
-  policies?: IPolicyData[];
-  [key: string]: any;
-}
-
 const AuthorityProvider: React.FC<Props> = props => {
   if (typeof useModel !== 'function') {
     throw new Error('[plugin-authority]: useModel is not a function, @umijs/plugin-initial-state is needed.')
@@ -35,9 +29,9 @@ const AuthorityProvider: React.FC<Props> = props => {
   const { initialState } = useModel('@@initialState');
 
   const authority: AuthorityInstance = useMemo(() => {
-    const { actions = [], policies = [] } = authorityFactory(initialState as any);
+    const { actions = [], policies = [], separator = '/' } = authorityFactory(initialState as any) || {};
 
-    const policy = new Policy(actions);
+    const policy = new Policy(actions, separator);
 
     policies.forEach((item) => {
       policy.addPolicy(item);
