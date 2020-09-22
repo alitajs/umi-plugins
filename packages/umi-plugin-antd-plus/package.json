@@ -1,0 +1,27 @@
+{
+  "name": "@alitajs/umi-plugin-antd-plus",
+  "version": "0.1.0",
+  "description": "umi-plugin-antd-plus",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/plugins"
+  },
+  "keywords": [
+    "umi"
+  ],
+  "peerDependencies": {
+    "umi": "3.x"
+  },
+  "dependencies": {
+    "@alitajs/antd-plus": "^2.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
