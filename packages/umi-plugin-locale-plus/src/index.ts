@@ -90,7 +90,7 @@ export default (api: IApi) => {
       key: 'addAntdLocales',
       type: api.ApplyPluginsType.add,
       initialValue: [
-        `antd/${api.config?.ssr ? 'lib' : 'es'}/locale/${getAntdLocale(
+        `${api.config.locale?.libraryName || 'antd'}/${api.config?.ssr ? 'lib' : 'es'}/locale/${getAntdLocale(
           args.lang,
           args.country,
         )}`,
