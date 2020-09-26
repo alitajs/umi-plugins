@@ -1,6 +1,6 @@
 {
   "name": "@alitajs/umi-preset-react",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "umi-preset-react",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@alitajs/umi-plugin-authority": "0.5.0",
-    "@alitajs/umi-plugin-locale-plus": "^0.11.0",
+    "@alitajs/umi-plugin-locale-plus": "0.12.0",
     "@umijs/plugin-analytics": "0.2.2",
     "@umijs/plugin-antd": "0.8.0",
     "@umijs/plugin-crossorigin": "1.1.1",
