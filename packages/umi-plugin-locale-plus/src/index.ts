@@ -49,7 +49,6 @@ export default (api: IApi) => {
         baseNavigator: true,
         useLocalStorage: true,
         baseSeparator: '-',
-        libraryName: '@alitajs/antd-plus',
         antd: !!hasAntd,
       },
       schema(joi) {
@@ -86,20 +85,18 @@ export default (api: IApi) => {
     }));
   }
 
-  const addAntdLocales: IAddAntdLocales = async args => {
-    const { libraryName } = api.config.locale as ILocaleConfig;
-    return await api.applyPlugins({
+  const addAntdLocales: IAddAntdLocales = async args =>
+    await api.applyPlugins({
       key: 'addAntdLocales',
       type: api.ApplyPluginsType.add,
       initialValue: [
-        `${libraryName || 'antd'}/${api.config?.ssr ? 'lib' : 'es'}/locale/${getAntdLocale(
+        `antd/${api.config?.ssr ? 'lib' : 'es'}/locale/${getAntdLocale(
           args.lang,
           args.country,
         )}`,
       ],
       args,
     });
-  }
 
   const getList = async (): Promise<IGetLocaleFileListResult[]> => {
     return getLocaleList({
