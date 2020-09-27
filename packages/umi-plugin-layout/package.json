@@ -1,0 +1,15 @@
+{
+  "name": "@alitajs/umi-plugin-layout",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.4.19",
+    "@umijs/route-utils": "^1.0.32",
+    "antd": "^4.6.5",
+    "path-to-regexp": "^6.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
