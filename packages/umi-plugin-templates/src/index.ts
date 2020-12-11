@@ -58,7 +58,6 @@ export default (api: IApi) => {
 Commands:
 
   ${chalk.cyan(`add `)}     add a template to your project
-  ${chalk.cyan(`list`)}     list all templates
   ${chalk.cyan(`clear`)}    clear all git cache
 
 
@@ -89,8 +88,6 @@ Examples:
   ${chalk.gray(`# Add template with specified route path`)}
   alita template add demo --path /foo/bar
 
-  ${chalk.gray(`# List all templates`)}
-  alita template list
   `.trim();
 
   api.registerCommand({
