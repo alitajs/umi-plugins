@@ -1,0 +1,31 @@
+{
+  "name": "@alitajs/templates",
+  "version": "0.0.1",
+  "description": "templates",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alitajs/umi-plugins"
+  },
+  "keywords": [
+    "umi",
+    "alita"
+  ],
+  "authors": [
+    "xiaohuoni <448627663@qq.com> (https://github.com/xiaohuoni)"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "umi": "3.x"
+  },
+  "dependencies": {
+    "@alitajs/block-sdk": "2.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
